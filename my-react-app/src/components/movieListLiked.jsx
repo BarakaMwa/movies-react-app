@@ -6,7 +6,7 @@ function MovieListLiked() {
     const [movies, setMovies] = useState([]);
     const getMovies = async () =>{
 
-        const url = "https://api.themoviedb.org/3/movie/popular?api_key=d0f5f2e135336200362af8a1a73acb17";;
+        const url = "https://api.themoviedb.org/3/movie/popular?api_key=d0f5f2e135336200362af8a1a73acb17";
 
         const response = await fetch(url);
 
