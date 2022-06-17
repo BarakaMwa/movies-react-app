@@ -1121,7 +1121,8 @@ section.lazy-placeholder:after {
 .cid-t8WDofjtve {
   padding-top: 90px;
   padding-bottom: 90px;
-  background-color: #efefef;
+  /*background-color: #efefef;*/
+  background: linear-gradient(0deg, #c1c1c1, #000000);
 }
 .cid-t8WDofjtve .card-box {
   padding: 0 2rem;

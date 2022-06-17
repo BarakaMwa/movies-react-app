@@ -1,9 +1,7 @@
 import Movie from "./movie";
-import {forEach} from "react-bootstrap/ElementChildren";
 import {useEffect, useState} from "react";
 
-
-function MovieList() {
+function MovieListLiked() {
 
     const [movies, setMovies] = useState([]);
     const getMovies = async () =>{
@@ -170,4 +168,4 @@ function MovieList() {
     );
 }
 
-export default MovieList;
+export default MovieListLiked;

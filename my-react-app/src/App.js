@@ -8,7 +8,8 @@ import "./assets/dropdown/css/style.css";
 import "./assets/tether/tether.min.css";
 import "./assets/theme/css/style.css";
 import "./assets/mobirise/css/mbr-additional.css";
-import "./assets/mobirise/css/mbr-additional.css";
+import "./assets/animate/animate.min.css";
+import "./index.css";
 
 function App() {
   return (

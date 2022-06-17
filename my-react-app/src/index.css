@@ -19,3 +19,13 @@ code {
 .mbr-overlay-one{
   opacity: 0.3; background-color: rgb(118, 118, 118);
 }
+
+.scroll-x > .row{
+  overflow-x: auto;
+  flex-wrap: nowrap;
+
+}
+.card-wrapper:hover {
+  animation: pulse; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}

@@ -1,5 +1,4 @@
-
-function MovieListTitle(){
+function MovieListTitleLiked(){
     return (
         <section className="mbr-section content4 cid-t8WDr6jUFS" id="content4-3">
 
@@ -7,7 +6,7 @@ function MovieListTitle(){
                 <div className="media-container-row">
                     <div className="title col-12 col-md-8">
                         <h2 className="align-left p-0 mbr-fonts-style display-2"><strong>
-                            Movie List</strong></h2>
+                            Liked Movie List</strong></h2>
 
 
                     </div>
@@ -16,4 +15,4 @@ function MovieListTitle(){
         </section>
     );
 }
-export default MovieListTitle;
+export default MovieListTitleLiked;
