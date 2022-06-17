@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.mbr-figure-one{
+  width: 55%;
+}
+
+.mbr-overlay-one{
+  opacity: 0.3; background-color: rgb(118, 118, 118);
+}
