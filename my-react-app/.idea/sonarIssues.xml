@@ -33,6 +33,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/public/assets/theme/js/script.js">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/public/index.html">
           <value>
             <set />
@@ -148,6 +153,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/home.js">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/index.css">
           <value>
             <set />
@@ -163,7 +173,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/liked.js">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/movieDetails.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/noPage.js">
           <value>
             <set />
           </value>

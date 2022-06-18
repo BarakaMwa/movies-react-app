@@ -1,4 +1,3 @@
-import './App.css';
 import "./assets/web/assets/mobirise-icons2/mobirise2.css";
 import "./assets/web/assets/mobirise-icons/mobirise-icons.css";
 import "./assets/bootstrap/css/bootstrap.min.css";
@@ -8,31 +7,32 @@ import "./assets/dropdown/css/style.css";
 import "./assets/tether/tether.min.css";
 import "./assets/theme/css/style.css";
 import "./assets/mobirise/css/mbr-additional.css";
-import "./assets/mobirise/css/mbr-additional.css";
-import "./index.css";
+import './index.css';
+import Home from "./home";
+import Liked from "./liked";
+import NoPage from "./noPage";
+import NavbarComponent from "./components/navbarComponent";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 function App() {
-  return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-primary">
-        <a className="navbar-brand font-weight-bolder" href="#">Movie Api Application</a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
+    return (
+        <Router>
+            <section>
+                <section className="menu cid-t8WyjJrifv" id="menu1-0">
+                    <NavbarComponent/>
+                </section>
+                <section id="app-context">
+                    <Routes>
+                        <Route path="/" element={<Home/>}>
+                        </Route>
+                        <Route path="liked" element={<Liked/>}/>
+                        <Route path="*" element={<NoPage/>}/>
+                    </Routes>
+                </section>
+            </section>
+        </Router>
 
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
-              <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Liked Movies</a>
-            </li>
-
-          </ul>
-        </div>
-      </nav>
-  );
+    );
 }
 
 export default App;

@@ -1,17 +1,19 @@
 import React from 'react';
-// import App from './App';
+import MovieList from './components/movieList';
 import IntroHeader from './components/introHeader';
-import MovieList from "./components/movieList";
-import MovieListLiked from "./components/movieListLiked";
 
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//     <App />
+// );
 
-function Liked() {
+function Home() {
 
     return (
-        <section id="introHeader">
-            <IntroHeader title={"Liked Movie List"} buttonId={"movie-list-liked"}/>
-            <MovieListLiked/>
-        </section>
+            <section id="introHeader">
+                <IntroHeader title={"Movie List"} buttonId={"movie-list"}/>
+                <MovieList/>
+            </section>
     )
 
 // ReactDOM.render(<NavbarComponent/>, document.getElementById('menu1-0'));
@@ -22,4 +24,4 @@ function Liked() {
 
 }
 
-export default Liked;
+export default Home;

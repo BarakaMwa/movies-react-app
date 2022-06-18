@@ -5,7 +5,6 @@ import {useEffect, useState} from "react";
 export let newLikedMovies;
 
 function MovieList() {
-
     const [searchValue, setSearch] = useState("");
     const [movies, setMovies] = useState([]);
     const [likedMovies, setLikedMovies] = useState([]);
@@ -31,14 +30,14 @@ function MovieList() {
     }, [searchValue])
     const addLikedMovie = (movie) => {
        newLikedMovies = [...likedMovies, movie];
-        setLikedMovies(newLikedMovies)
+        setLikedMovies(newLikedMovies);
         console.log(newLikedMovies)
     }
 
 
     return (
 
-        <section className="features3 cid-t8WDofjtve" id="features3-2">
+        <section className="features3 cid-t8WDofjtve" id="movie-list">
             {
                 <SearchInputBox
                     searchValue={searchValue}
