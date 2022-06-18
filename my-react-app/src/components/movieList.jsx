@@ -5,9 +5,11 @@ import {useEffect, useState} from "react";
 export let newLikedMovies;
 
 function MovieList() {
+
     const [searchValue, setSearch] = useState("");
     const [movies, setMovies] = useState([]);
     const [likedMovies, setLikedMovies] = useState([]);
+
     const getMovies = async (searchValue) => {
 
         let url = "https://api.themoviedb.org/3/movie/popular?api_key=d0f5f2e135336200362af8a1a73acb17";

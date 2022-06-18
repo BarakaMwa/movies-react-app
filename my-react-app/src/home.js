@@ -1,4 +1,3 @@
-import React from 'react';
 import MovieList from './components/movieList';
 import IntroHeader from './components/introHeader';
 

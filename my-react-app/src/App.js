@@ -15,6 +15,7 @@ import NavbarComponent from "./components/navbarComponent";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 function App() {
+
     return (
         <Router>
             <section>
@@ -23,9 +24,9 @@ function App() {
                 </section>
                 <section id="app-context">
                     <Routes>
-                        <Route path="/" element={<Home/>}>
+                        <Route exact path="/" element={<Home/>}>
                         </Route>
-                        <Route path="liked" element={<Liked/>}/>
+                        <Route path="/liked" element={<Liked/>}/>
                         <Route path="*" element={<NoPage/>}/>
                     </Routes>
                 </section>

@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom';
+
 
 function NavbarComponent() {
     return (
@@ -28,17 +30,12 @@ function NavbarComponent() {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
                     <li className="nav-item">
-                        <a className="nav-link link text-white display-4" href="/liked"><span
-                            className="mobi-mbri mobi-mbri-like mbr-iconfont mbr-iconfont-btn"></span>
+                        <Link className="nav-link link text-white display-4" to="/liked">Liked Movies
+                        </Link>
 
-                            Liked Movies</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link link text-white display-4" href="/">
-                            <span
-                                className="mbri-image-slider mbr-iconfont mbr-iconfont-btn"></span>
-
-                            All Movies</a>
+                        <Link className="nav-link link text-white display-4" to="/">
+                            All Movies
+                        </Link>
                     </li>
 
                 </ul>

@@ -1,7 +1,5 @@
 import React from 'react';
-// import App from './App';
 import IntroHeader from './components/introHeader';
-import MovieList from "./components/movieList";
 import MovieListLiked from "./components/movieListLiked";
 
 
