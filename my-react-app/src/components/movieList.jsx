@@ -1,9 +1,11 @@
 import Movie from "./movie";
 import SearchInputBox from "./searchInputBox";
+import LikeMovie from "./likeMovie";
+import UnLikeMovie from "./unLikeMovie";
 import {useEffect, useState} from "react";
 
 
-function MovieList(searchText) {
+function MovieList() {
 
     const [searchValue, setSearch] = useState("");
     const [movies, setMovies] = useState([]);
@@ -27,10 +29,6 @@ function MovieList(searchText) {
     useEffect(() => {
         getMovies(searchValue);
     }, [searchValue])
-
-   /* useEffect(() => {
-        getSearchMovies(searchValue);
-    }, [searchValue])*/
 
 
     return (
@@ -61,7 +59,8 @@ function MovieList(searchText) {
                                 video={movie.video}
                                 vote_average={movie.vote_average}
                                 vote_count={movie.vote_count}
-                                like={"Like"}
+                                likeMovie = {LikeMovie}
+                                like = {1}
                             />)
                     }
 
