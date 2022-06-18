@@ -1,4 +1,4 @@
-function IntroHeader() {
+function IntroHeader(prop) {
     return (
 
         <section className="header3 cid-t8Wz5pjAGp mbr-fullscreen mbr-parallax-background" id="header3-1">
@@ -14,16 +14,15 @@ function IntroHeader() {
 
                     <div className="media-content">
                         <h1 className="mbr-section-title mbr-white pb-3 mbr-fonts-style display-1"><strong>
-                            Movies</strong></h1>
+                            {prop.title}</strong></h1>
 
                         <div className="mbr-section-text mbr-white pb-3 ">
 
                         </div>
                         <div className="mbr-section-btn">
                             <a className="btn btn-md btn-primary display-4"
-                               href="#">Liked Movies</a>
-                            <a className="btn btn-md btn-white-outline display-4" href="#">Movies
-                                List</a></div>
+                               href={"#"+prop.buttonId}>See Movies</a>
+                        </div>
                     </div>
                 </div>
             </div>

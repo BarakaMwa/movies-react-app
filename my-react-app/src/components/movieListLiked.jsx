@@ -1,40 +1,38 @@
 import Movie from "./movie";
 import {useEffect, useState} from "react";
-import LikeMovie from "./likeMovie";
+import UnLikeMovie from "./unLikeMovie";
 import {newLikedMovies} from "./movieList";
 
 function MovieListLiked() {
 
     const [movies, setMovies] = useState([]);
+    const [likedMovies, setLikedMovies] = useState([]);
 
+    const getMovies = async () => {
 
-    const getMovies = async (newLikedMovies) =>{
-
-        /*const url = "https://api.themoviedb.org/3/movie/popular?api_key=d0f5f2e135336200362af8a1a73acb17";
-
-        const response = await fetch(url);
-
-        const data =await response.json();
-
-        console.log(data)*/
+        console.log(newLikedMovies)
 
         setMovies(newLikedMovies)
 
-        // movies = data.results;
     };
 
-    useEffect(()=>{
-        getMovies();
+    useEffect(() => {
+        getMovies(newLikedMovies);
     }, [newLikedMovies])
 
+    const removeLikedMovie = (movie) => {
+        const newRemovedMovies = [...likedMovies, movie];
+        setLikedMovies(newRemovedMovies);
+        console.log(newRemovedMovies)
+    }
     return (
 
-        <section className="features3 cid-t8WDofjtve" id="features3-2">
+        <section className="features3 cid-t8WDofjtve" id="movie-list-like">
             <div className="container-fluid scroll-x">
-                <div className="media-container-row row">
+                <div className="media-container-row row justify-content-start">
 
                     {
-                        movies.map((movie)=>
+                        movies.map((movie) =>
                             <Movie
                                 title={movie.title}
                                 backdrop_path={movie.backdrop_path}
@@ -49,8 +47,9 @@ function MovieListLiked() {
                                 video={movie.video}
                                 vote_average={movie.vote_average}
                                 vote_count={movie.vote_count}
-                                likeMovie = {LikeMovie}
-                            /> )
+                                unlikeMovie = {UnLikeMovie}
+                                handleLikeClick={removeLikedMovie}
+                            />)
                     }
 
                 </div>
