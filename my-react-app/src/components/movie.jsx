@@ -1,19 +1,23 @@
-function Movie(props) {
+function Movie(prop) {
 
     const movieDetails = () => {
 
     }
 
 
-        const LikeMovie = props.likeMovie;
+        const LikeMovie = prop.likeMovie;
+
     return (
         <div className="card p-3 col-sm-6 col-md-6 col-lg-2">
             <div className="card-wrapper align-content-center animate__animated pb-0"
-                 onClick={() => movieDetails(props.id)}>
+                 onClick={() => movieDetails(prop)}>
                 <div className="card-img">
-                    <img src={"https://image.tmdb.org/t/p/w300" + props.poster_path} alt="images"/>
+                    <img src={"https://image.tmdb.org/t/p/w300" + prop.poster_path} alt="images"/>
                 </div>
-                {<LikeMovie/>}
+                {<LikeMovie
+                    handleLikeClick = {prop.handleLikeClick}
+                    movie = {prop}
+                />}
             </div>
         </div>
     );

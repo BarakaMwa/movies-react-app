@@ -6,7 +6,6 @@ import MovieListTitle from './components/movieListTitle';
 import MovieList from './components/movieList';
 import IntroHeader from './components/introHeader';
 import reportWebVitals from './reportWebVitals';
-import MovieListTitleLiked from "./components/movieListTitleLiked";
 import MovieListLiked from "./components/movieListLiked"
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -21,13 +20,13 @@ const introHeader = ReactDOM.createRoot(document.getElementById('introHeader'));
 introHeader.render(<IntroHeader/>)
 
 const movieListTitle = ReactDOM.createRoot(document.getElementById('movieListTitle'));
-movieListTitle.render(<MovieListTitle/>)
+movieListTitle.render(<MovieListTitle title="Movie List"/>)
 
 const movieList = ReactDOM.createRoot(document.getElementById('movieList'));
 movieList.render(<MovieList/>)
 
 const movieListTitleLiked = ReactDOM.createRoot(document.getElementById('movieListTitleLiked'));
-movieListTitleLiked.render(<MovieListTitleLiked/>)
+movieListTitleLiked.render(<MovieListTitle title="Liked Movies"/>)
 
 const movieListLiked = ReactDOM.createRoot(document.getElementById('movieListLiked'));
 movieListLiked.render(<MovieListLiked/>)

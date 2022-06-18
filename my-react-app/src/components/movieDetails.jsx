@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import Movie from "./movie";
 import LikeMovie from "./likeMovie";
+import MovieDetailed from "./movieDetailed";
 
 function MovieDetails() {
 
@@ -16,8 +17,6 @@ function MovieDetails() {
         console.log(data)
 
         setMovies(data.results)
-
-        // movies = data.results;
     };
 
     useEffect(()=>{
@@ -30,7 +29,7 @@ function MovieDetails() {
 
             {
                 movies.map((movie)=>
-                    <Movie
+                    <MovieDetailed
                         title={movie.title}
                         backdrop_path={movie.backdrop_path}
                         overview={movie.overview}

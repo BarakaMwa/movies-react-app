@@ -1,14 +1,14 @@
 import Movie from "./movie";
 import SearchInputBox from "./searchInputBox";
 import LikeMovie from "./likeMovie";
-import UnLikeMovie from "./unLikeMovie";
 import {useEffect, useState} from "react";
-
+export let newLikedMovies;
 
 function MovieList() {
 
     const [searchValue, setSearch] = useState("");
     const [movies, setMovies] = useState([]);
+    const [likedMovies, setLikedMovies] = useState([]);
     const getMovies = async (searchValue) => {
 
         let url = "https://api.themoviedb.org/3/movie/popular?api_key=d0f5f2e135336200362af8a1a73acb17";
@@ -29,6 +29,11 @@ function MovieList() {
     useEffect(() => {
         getMovies(searchValue);
     }, [searchValue])
+    const addLikedMovie = (movie) => {
+       newLikedMovies = [...likedMovies, movie];
+        setLikedMovies(newLikedMovies)
+        console.log(newLikedMovies)
+    }
 
 
     return (
@@ -41,7 +46,7 @@ function MovieList() {
                 />
             }
             <div className="container-fluid scroll-x">
-                <div className="media-container-row row">
+                <div className="media-container-row row justify-content-start">
 
                     {
                         movies.map((movie) =>
@@ -59,8 +64,8 @@ function MovieList() {
                                 video={movie.video}
                                 vote_average={movie.vote_average}
                                 vote_count={movie.vote_count}
-                                likeMovie = {LikeMovie}
-                                like = {1}
+                                likeMovie={LikeMovie}
+                                handleLikeClick={addLikedMovie}
                             />)
                     }
 

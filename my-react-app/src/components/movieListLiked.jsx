@@ -1,28 +1,31 @@
 import Movie from "./movie";
 import {useEffect, useState} from "react";
 import LikeMovie from "./likeMovie";
+import {newLikedMovies} from "./movieList";
 
 function MovieListLiked() {
 
     const [movies, setMovies] = useState([]);
-    const getMovies = async () =>{
 
-        const url = "https://api.themoviedb.org/3/movie/popular?api_key=d0f5f2e135336200362af8a1a73acb17";
+
+    const getMovies = async (newLikedMovies) =>{
+
+        /*const url = "https://api.themoviedb.org/3/movie/popular?api_key=d0f5f2e135336200362af8a1a73acb17";
 
         const response = await fetch(url);
 
         const data =await response.json();
 
-        console.log(data)
+        console.log(data)*/
 
-        setMovies(data.results)
+        setMovies(newLikedMovies)
 
         // movies = data.results;
     };
 
     useEffect(()=>{
         getMovies();
-    }, [])
+    }, [newLikedMovies])
 
     return (
 
@@ -47,7 +50,6 @@ function MovieListLiked() {
                                 vote_average={movie.vote_average}
                                 vote_count={movie.vote_count}
                                 likeMovie = {LikeMovie}
-                                like={0}
                             /> )
                     }
 
