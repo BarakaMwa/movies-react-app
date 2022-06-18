@@ -5,8 +5,8 @@ import {newLikedMovies} from "./movieList";
 
 function MovieListLiked() {
 
-    const [movies, setMovies] = useState([]);
-    const [likedMovies, setLikedMovies] = useState([]);
+    let [movies, setMovies] = useState([]);
+    const [likedMovies, setLikedMovies] = useState([newLikedMovies]);
 
     const getMovies = async () => {
 
@@ -14,17 +14,23 @@ function MovieListLiked() {
 
         setMovies(newLikedMovies)
 
+        movies = newLikedMovies;
+
+        console.log(movies);
+
     };
 
     useEffect(() => {
-        getMovies(newLikedMovies);
+        getMovies();
     }, [newLikedMovies])
 
+
     const removeLikedMovie = (movie) => {
-        const newRemovedMovies = [...likedMovies, movie];
-        setLikedMovies(newRemovedMovies);
-        console.log(newRemovedMovies)
+        const newLikedMovies_ = [...likedMovies, movie];
+        setLikedMovies(newLikedMovies_);
+        console.log(newLikedMovies_)
     }
+
     return (
 
         <section className="features3 cid-t8WDofjtve" id="movie-list-like">
@@ -47,7 +53,7 @@ function MovieListLiked() {
                                 video={movie.video}
                                 vote_average={movie.vote_average}
                                 vote_count={movie.vote_count}
-                                unlikeMovie = {UnLikeMovie}
+                                likeMovie = {UnLikeMovie}
                                 handleLikeClick={removeLikedMovie}
                             />)
                     }
