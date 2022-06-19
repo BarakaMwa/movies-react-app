@@ -41,11 +41,19 @@ function MovieList() {
 
     const addLikedMovie = (movie) => {
 
-        const newLikedMovies = [...likedMovies, movie];
-        setLikedMovies(newLikedMovies);
-        console.log(newLikedMovies)
+        /*if exists Dont add*/
+        if(localStore.filter((item)=>item.id === movie.id).length === 0){
+            save()
+        }
 
-        saveToLocalStorage(newLikedMovies)
+        function save() {
+            const newLikedMovies = [...likedMovies, movie];
+            setLikedMovies(newLikedMovies);
+            console.log(newLikedMovies)
+
+            saveToLocalStorage(newLikedMovies)
+        }
+
     }
 
 
