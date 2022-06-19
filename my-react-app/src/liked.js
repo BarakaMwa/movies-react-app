@@ -1,6 +1,6 @@
 import React from 'react';
 import IntroHeader from './components/introHeader';
-import MovieListLiked from "./components/movieListLiked";
+import MovieListLiked from "./movieListLiked";
 
 /*Renders Liked Page*/
 

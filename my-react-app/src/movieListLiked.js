@@ -1,6 +1,6 @@
-import Movie from "./movie";
+import Movie from "./components/movie";
 import {useEffect, useState} from "react";
-import UnLikeMovie from "./unLikeMovie";
+import UnLikeMovie from "./components/unLikeMovie";
 
 /**
  * Renders Liked Movie List

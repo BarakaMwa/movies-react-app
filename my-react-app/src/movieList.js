@@ -1,6 +1,6 @@
-import Movie from "./movie";
-import SearchInputBox from "./searchInputBox";
-import LikeMovie from "./likeMovie";
+import Movie from "./components/movie";
+import SearchInputBox from "./components/searchInputBox";
+import LikeMovie from "./components/likeMovie";
 import {useEffect, useState} from "react";
 
 /**

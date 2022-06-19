@@ -1,4 +1,4 @@
-import MovieList from './components/movieList';
+import MovieList from './movieList';
 import IntroHeader from './components/introHeader';
 
 /*Renders intro Header*/
