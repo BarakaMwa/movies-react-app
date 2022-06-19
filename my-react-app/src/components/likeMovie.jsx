@@ -1,7 +1,10 @@
 function LikeMovie(props) {
     return (
         <div className="row justify-content-center">
-            <span onClick={() => props.handleLikeClick(props.movie)} role="button" className="mobi-mbri mobi-mbri-hearth mbr-iconfont mbr-iconfont-btn btn col-4 label badge-primary text-center big like-unlike"></span>
+            <button onClick={() => props.handleLikeClick(props.movie)} className={"btn btn-md btn-primary btn-block display-4"}>
+                <span className="mobi-mbri mobi-mbri-hearth mbr-iconfont mbr-iconfont-btn text-center big like-unlike"></span>
+            </button>
+
         </div>
 
 )

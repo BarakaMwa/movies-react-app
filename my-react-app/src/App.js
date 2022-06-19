@@ -1,3 +1,4 @@
+import './index.css';
 import "./assets/web/assets/mobirise-icons2/mobirise2.css";
 import "./assets/web/assets/mobirise-icons/mobirise-icons.css";
 import "./assets/bootstrap/css/bootstrap.min.css";
@@ -8,7 +9,6 @@ import "./assets/tether/tether.min.css";
 import "./assets/theme/css/style.css";
 import "./assets/mobirise/css/mbr-additional.css";
 import "./assets/animate/animate.min.css";
-import './index.css';
 import Home from "./home";
 import Liked from "./liked";
 import NoPage from "./noPage";
