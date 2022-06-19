@@ -18,9 +18,9 @@ function NavbarComponent() {
             <div className="menu-logo">
                 <div className="navbar-brand">
                 <span className="navbar-logo">
-                    <a href="#">
+                    <Link to="/">
                          <img src="./assets/images/mbr.png" alt="Mobirise" title=""/>
-                    </a>
+                    </Link>
                 </span>
                     <span className="navbar-caption-wrap"><a className="navbar-caption text-white display-4"
                                                              href="https://mobiri.se">

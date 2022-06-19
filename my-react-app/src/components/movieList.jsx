@@ -2,10 +2,10 @@ import Movie from "./movie";
 import SearchInputBox from "./searchInputBox";
 import LikeMovie from "./likeMovie";
 import {useEffect, useState} from "react";
-export let newLikedMovies;
 
 function MovieList() {
 
+    const localStore = JSON.parse(localStorage.getItem("liked-movies"))
     const [searchValue, setSearch] = useState("");
     const [movies, setMovies] = useState([]);
     const [likedMovies, setLikedMovies] = useState([]);
@@ -30,10 +30,24 @@ function MovieList() {
     useEffect(() => {
         getMovies(searchValue);
     }, [searchValue])
+
+    const saveToLocalStorage = (items) => {
+        localStorage.setItem('liked-movies', JSON.stringify(items));
+    }
+
     const addLikedMovie = (movie) => {
-       newLikedMovies = [...likedMovies, movie];
+
+        localStore.forEach(findTotal);
+
+        function findTotal(item) {
+
+        }
+
+        const newLikedMovies = [...likedMovies, movie];
         setLikedMovies(newLikedMovies);
         console.log(newLikedMovies)
+
+        saveToLocalStorage(newLikedMovies)
     }
 
 

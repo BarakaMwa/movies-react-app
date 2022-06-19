@@ -1,11 +1,11 @@
 import Movie from "./movie";
 import {useEffect, useState} from "react";
 import UnLikeMovie from "./unLikeMovie";
-import {newLikedMovies} from "./movieList";
 
 function MovieListLiked() {
 
-    let [likedMovies, setLikedMovies] = useState(newLikedMovies);
+    const localStore = JSON.parse(localStorage.getItem("liked-movies"))
+    const [likedMovies, setLikedMovies] = useState(localStore);
 
     const getMovies = async (likedMovies) => {
 
@@ -21,11 +21,16 @@ function MovieListLiked() {
         getMovies(likedMovies);
     }, [likedMovies])
 
+    const saveToLocalStorage = (items) => {
+        localStorage.setItem('liked-movies', JSON.stringify(items));
+    }
 
     const removeLikedMovie = (movie) => {
-        likedMovies = likedMovies.filter((likedMovie)=> likedMovie.id !== movie.id);
-        setLikedMovies(likedMovies);
-        console.log(likedMovies)
+        const newLikedMovies = likedMovies.filter(
+            (likedMovie) => likedMovie.id !== movie.id);
+        setLikedMovies(newLikedMovies);
+        console.log(newLikedMovies)
+        saveToLocalStorage(newLikedMovies);
     }
 
     return (
@@ -50,7 +55,7 @@ function MovieListLiked() {
                                 video={movie.video}
                                 vote_average={movie.vote_average}
                                 vote_count={movie.vote_count}
-                                likeMovie = {UnLikeMovie}
+                                likeMovie={UnLikeMovie}
                                 handleLikeClick={removeLikedMovie}
                             />)
                     }
