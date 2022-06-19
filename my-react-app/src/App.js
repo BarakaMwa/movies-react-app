@@ -1,4 +1,3 @@
-import './index.css';
 import "./assets/web/assets/mobirise-icons2/mobirise2.css";
 import "./assets/web/assets/mobirise-icons/mobirise-icons.css";
 import "./assets/bootstrap/css/bootstrap.min.css";
@@ -9,11 +8,14 @@ import "./assets/tether/tether.min.css";
 import "./assets/theme/css/style.css";
 import "./assets/mobirise/css/mbr-additional.css";
 import "./assets/animate/animate.min.css";
+import './index.css';
 import Home from "./home";
 import Liked from "./liked";
 import NoPage from "./noPage";
 import NavbarComponent from "./components/navbarComponent";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+
+/*Renders Other App Elements Using Routes*/
 
 function App() {
 
@@ -21,7 +23,7 @@ function App() {
         <Router>
             <section>
                 <section className="menu cid-t8WyjJrifv" id="menu1-0">
-                    <NavbarComponent/>
+                    <NavbarComponent display={true}/>
                 </section>
                 <section id="app-context">
                     <Routes>

@@ -2,6 +2,10 @@ import Movie from "./movie";
 import {useEffect, useState} from "react";
 import UnLikeMovie from "./unLikeMovie";
 
+/**
+ * Renders Liked Movie List
+ * */
+
 function MovieListLiked() {
 
     const localStore = JSON.parse(localStorage.getItem("liked-movies"))

@@ -1,3 +1,10 @@
+/**
+ * Intro header
+ * takes in Prop Of Movie
+ * @param prop
+ * */
+import {Link} from 'react-router-dom';
+
 function IntroHeader(prop) {
     return (
 
@@ -17,13 +24,14 @@ function IntroHeader(prop) {
                         </div>
                         <div className="mbr-section-btn">
                             <a className="btn btn-md btn-primary display-4"
-                               href={"#"+prop.buttonId}>See Movies</a>
+                               href={"#" + prop.buttonId}>See Movies</a>
                         </div>
                     </div>
 
                     <div className="mbr-figure mbr-figure-one">
-                        <a href="#">
-                            <img src="./assets/images/mbr.png" alt="Mobirise" title=""/></a>
+                        <Link to="/">
+                            <img src="./assets/images/mbr.png" alt="Mobirise" title=""/>
+                        </Link>
                     </div>
 
                 </div>
