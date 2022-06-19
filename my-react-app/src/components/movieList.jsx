@@ -3,6 +3,10 @@ import SearchInputBox from "./searchInputBox";
 import LikeMovie from "./likeMovie";
 import {useEffect, useState} from "react";
 
+/**
+ * Renders Movie List
+ * */
+
 function MovieList() {
 
     const localStore = JSON.parse(localStorage.getItem("liked-movies"))

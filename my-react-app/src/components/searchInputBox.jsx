@@ -1,6 +1,8 @@
-
+/**
+ * Renders Search Box
+ * @param props
+ * */
 function SearchInputBox(props) {
-
 
 
     return (
@@ -9,14 +11,15 @@ function SearchInputBox(props) {
                 <div className="mbr-form form-with-styler">
                     <div className="dragArea row">
                         <div className="form-group col" data-for="email">
-                            <input type="text" name="email" placeholder="Search" value={props.value} onChange={(event) => props.setSearch(event.target.value)}
+                            <input type="text" name="email" placeholder="Search" value={props.value}
+                                   onChange={(event) => props.setSearch(event.target.value)}
                                    className="form-control display-7 form-control-custom" id="email-form3-a"/>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-);
+    );
 }
 
 export default SearchInputBox;

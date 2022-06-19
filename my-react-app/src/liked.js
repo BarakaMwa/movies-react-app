@@ -2,6 +2,7 @@ import React from 'react';
 import IntroHeader from './components/introHeader';
 import MovieListLiked from "./components/movieListLiked";
 
+/*Renders Liked Page*/
 
 function Liked() {
 

@@ -15,13 +15,15 @@ import NoPage from "./noPage";
 import NavbarComponent from "./components/navbarComponent";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
+/*Renders Other App Elements Using Routes*/
+
 function App() {
 
     return (
         <Router>
             <section>
                 <section className="menu cid-t8WyjJrifv" id="menu1-0">
-                    <NavbarComponent/>
+                    <NavbarComponent display={true}/>
                 </section>
                 <section id="app-context">
                     <Routes>
