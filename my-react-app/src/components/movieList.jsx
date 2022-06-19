@@ -12,7 +12,7 @@ function MovieList() {
     const localStore = JSON.parse(localStorage.getItem("liked-movies"))
     const [searchValue, setSearch] = useState("");
     const [movies, setMovies] = useState([]);
-    const [likedMovies, setLikedMovies] = useState([]);
+    let [likedMovies, setLikedMovies] = useState(localStore);
 
     const getMovies = async (searchValue) => {
 
@@ -40,12 +40,6 @@ function MovieList() {
     }
 
     const addLikedMovie = (movie) => {
-
-        localStore.forEach(findTotal);
-
-        function findTotal(item) {
-
-        }
 
         const newLikedMovies = [...likedMovies, movie];
         setLikedMovies(newLikedMovies);
