@@ -13,11 +13,15 @@ import Home from "./home";
 import Liked from "./liked";
 import NoPage from "./noPage";
 import NavbarComponent from "./components/navbarComponent";
+import MovieDetails from "./movieDetails";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 /*Renders Other App Elements Using Routes*/
 
 function App() {
+
+    var viewMovie = JSON.parse(localStorage.getItem("view-movie"));
+    console.log(viewMovie);
 
     return (
         <Router>
@@ -30,6 +34,7 @@ function App() {
                         <Route exact path="/" element={<Home/>}>
                         </Route>
                         <Route path="/liked" element={<Liked/>}/>
+                        <Route path="/viewMovie" element={<MovieDetails movie={viewMovie}/>}/>
                         <Route path="*" element={<NoPage/>}/>
                     </Routes>
                 </section>

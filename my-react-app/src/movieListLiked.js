@@ -25,6 +25,15 @@ function MovieListLiked() {
         getMovies(likedMovies);
     }, [likedMovies])
 
+    const saveMovieToView = (items) => {
+        localStorage.setItem('view-movie', JSON.stringify(items));
+    }
+
+    const viewMovie = (movie)=>{
+        saveMovieToView(movie)
+        window.location.href = "/viewMovie";
+    }
+
     const saveToLocalStorage = (items) => {
         localStorage.setItem('liked-movies', JSON.stringify(items));
     }
@@ -61,6 +70,7 @@ function MovieListLiked() {
                                 vote_count={movie.vote_count}
                                 likeMovie={UnLikeMovie}
                                 handleLikeClick={removeLikedMovie}
+                                handleViewClick={viewMovie}
                             />)
                     }
 

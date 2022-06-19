@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
-import LikeMovie from "./components/likeMovie";
 import MovieDetailed from "./components/movieDetailed";
+import LikeMovie from "./components/likeMovie";
+import UnLikeMovie from "./components/unLikeMovie";
 
 /**
  * Renders Detailed Movie List
@@ -8,28 +9,51 @@ import MovieDetailed from "./components/movieDetailed";
  * @param prop
  * */
 
-function MovieDetails() {
+function MovieDetails(prop) {
 
-    const [movies, setMovies] = useState([]);
-    const getMovies = async () => {
+    // let background = "https://image.tmdb.org/t/p/w800"+prop.movie.backdrop_path;
+        console.log(prop.movie);
+    const localStore = JSON.parse(localStorage.getItem("liked-movies"))
+    let [likedMovies, setLikedMovies] = useState(localStore);
+    const [movies, setMovies] = useState([prop.movie]);
+    const getMovies = async (movies) => {
 
-        const url = "https://api.themoviedb.org/3/movie/popular?api_key=d0f5f2e135336200362af8a1a73acb17";
+        console.log(movies)
 
-        const response = await fetch(url);
+        setMovies(movies)
 
-        const data = await response.json();
+        console.log(movies)
 
-        console.log(data)
-
-        setMovies(data.results)
     };
 
     useEffect(() => {
-        getMovies();
-    }, [])
+        getMovies(movies);
+    }, [movies])
+
+    const saveToLocalStorage = (items) => {
+        localStorage.setItem('liked-movies', JSON.stringify(items));
+    }
+
+    const addLikedMovie = (movie) => {
+
+        /*if exists Dont add*/
+        if(localStore.filter((item)=>item.id === movie.id).length === 0){
+            save()
+        }
+
+        function save() {
+            const newLikedMovies = [...likedMovies, movie];
+            setLikedMovies(newLikedMovies);
+            console.log(newLikedMovies)
+
+            saveToLocalStorage(newLikedMovies)
+        }
+
+    }
+
     return (
         <section className="header3 cid-t8Wz5pjAGp mbr-fullscreen mbr-parallax-background" id="header3-1"
-                 style={{backgroundImage: url('https://image.tmdb.org/t/p/w800' + props.backdrop_path)}}>
+                 >
             <div className="mbr-overlay mbr-overlay-one">
             </div>
 
@@ -50,7 +74,8 @@ function MovieDetails() {
                         vote_average={movie.vote_average}
                         vote_count={movie.vote_count}
                         likeMovie={LikeMovie}
-                        like={0}
+                        unLikeMovie={UnLikeMovie}
+                        handleLikeClick={addLikedMovie}
                     />)
             }
 
