@@ -5,30 +5,27 @@ import {newLikedMovies} from "./movieList";
 
 function MovieListLiked() {
 
-    let [movies, setMovies] = useState([]);
-    const [likedMovies, setLikedMovies] = useState([newLikedMovies]);
+    let [likedMovies, setLikedMovies] = useState(newLikedMovies);
 
-    const getMovies = async () => {
+    const getMovies = async (likedMovies) => {
 
-        console.log(newLikedMovies)
+        console.log(likedMovies)
 
-        setMovies(newLikedMovies)
+        setLikedMovies(likedMovies)
 
-        movies = newLikedMovies;
-
-        console.log(movies);
+        console.log(likedMovies);
 
     };
 
     useEffect(() => {
-        getMovies();
-    }, [newLikedMovies])
+        getMovies(likedMovies);
+    }, [likedMovies])
 
 
     const removeLikedMovie = (movie) => {
-        const newLikedMovies_ = [...likedMovies, movie];
-        setLikedMovies(newLikedMovies_);
-        console.log(newLikedMovies_)
+        likedMovies = likedMovies.filter((likedMovie)=> likedMovie.id !== movie.id);
+        setLikedMovies(likedMovies);
+        console.log(likedMovies)
     }
 
     return (
@@ -38,7 +35,7 @@ function MovieListLiked() {
                 <div className="media-container-row row justify-content-start">
 
                     {
-                        movies.map((movie) =>
+                        likedMovies.map((movie) =>
                             <Movie
                                 title={movie.title}
                                 backdrop_path={movie.backdrop_path}
