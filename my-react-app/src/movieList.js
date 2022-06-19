@@ -39,6 +39,15 @@ function MovieList() {
         localStorage.setItem('liked-movies', JSON.stringify(items));
     }
 
+    const saveMovieToView = (items) => {
+        localStorage.setItem('view-movie', JSON.stringify(items));
+    }
+
+    const viewMovie = (movie)=>{
+        saveMovieToView(movie)
+        window.location.href = "/viewMovie";
+    }
+
     const addLikedMovie = (movie) => {
 
         /*if exists Dont add*/
@@ -87,6 +96,7 @@ function MovieList() {
                                 vote_count={movie.vote_count}
                                 likeMovie={LikeMovie}
                                 handleLikeClick={addLikedMovie}
+                                handleViewClick={viewMovie}
                             />)
                     }
 
