@@ -34,9 +34,11 @@ function NavbarComponent(props) {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
                         <li className="nav-item">
-                            <Link className="nav-link link text-white display-4" to="/liked">Liked Movies
+                            <Link className="nav-link link text-white display-4" to="/liked">
+                                Liked Movies
                             </Link>
-
+                        </li>
+                        <li>
                             <Link className="nav-link link text-white display-4" to="/">
                                 All Movies
                             </Link>
