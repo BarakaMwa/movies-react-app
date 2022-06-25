@@ -32,7 +32,7 @@ code {
     animation-duration: 1s; /* don't forget to set a duration! */
 }
 
-.form-control-custom {
+.form-control-custom{
     border-radius: 40px;
     border: white 2px solid;
     background-color: transparent;

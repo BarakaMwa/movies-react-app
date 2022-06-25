@@ -8,6 +8,26 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../movie-app-api-vue/dist/index.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../movie-app-api-vue/src/App.vue">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../movie-app-api-vue/src/components/HelloWorld.vue">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../movie-app-api-vue/src/components/Navbar.vue">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/.idea/sonarIssues.xml">
           <value>
             <set />
@@ -69,6 +89,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/assets/swal/sweetalerttwo.jsx">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/assets/theme/css/style.css">
           <value>
             <set />
           </value>

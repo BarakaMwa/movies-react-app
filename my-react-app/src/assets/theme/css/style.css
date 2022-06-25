@@ -468,6 +468,13 @@ blockquote {
   line-height: 1.43;
   min-height: 3.5em;
   padding: 1.07em .5em;
+  border-radius: 40px;
+  border: white 2px solid;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  margin-top: 0px;
+  padding-left: 20px;
 }
 
 .form-control, .form-control:focus {
