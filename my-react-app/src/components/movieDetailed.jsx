@@ -17,7 +17,7 @@ function MovieDetailed(prop) {
             <div className="media-container-row">
                 <div className="mbr-figure mbr-figure-one">
                     <Link to="/image">
-                        <img src={"https://image.tmdb.org/t/p/w300" + prop.poster_path} alt="images"/>
+                        <img src={"https://image.tmdb.org/t/p/w300" + prop.poster_path} alt="images" />
                     </Link>
                 </div>
 

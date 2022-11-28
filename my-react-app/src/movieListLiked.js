@@ -26,7 +26,7 @@ function MovieListLiked() {
     }, [likedMovies])
 
     const saveMovieToView = (items) => {
-        localStorage.setItem('view-movie', JSON.stringify(items));
+        // localStorage.setItem('view-movie', JSON.stringify(items));
     }
 
     const viewMovie = (movie)=>{

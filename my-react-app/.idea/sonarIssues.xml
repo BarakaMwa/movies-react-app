@@ -13,6 +13,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../movie-app-api-vue/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../movie-app-api-vue/src/App.vue">
           <value>
             <set />
@@ -23,7 +28,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../movie-app-api-vue/src/components/Home.vue">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../movie-app-api-vue/src/components/NavBar.vue">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../movie-app-api-vue/src/components/Navbar.vue">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../movie-app-api-vue/src/components/NavbarComponent.vue">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../movie-app-api-vue/src/main.js">
           <value>
             <set />
           </value>
@@ -244,6 +269,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/noPage.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../vue-app-api/html-css/index.html">
           <value>
             <set />
           </value>
